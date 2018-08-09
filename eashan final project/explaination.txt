@@ -1,0 +1,34 @@
+Explaination 
+
+Sir, we have done the single core processor. I (mpd15i017)  have tried to generate the output e^1.7 rather than e^17 as it would have required minimum 24+ terms in the taylor series  and tried to store in the memory.
+
+What is done !
+
+
+1)ALU
+ I have integerated various adder,multiplier modules etc to form our ALU module
+ 32 bit 
+
+2)instruction memory
+ 16 bit.
+ the most significant 4 bits are for opcode
+ the next four for operand 1
+ the next four for operand 2
+ the least significant 4 bits for the result
+
+
+3)memory
+ I intended to store data from memory to the instruction register and data registers and store the output from processor register back to memory .
+ I however was not able to integrete the memory and register part with the ALU without any errors , which lead me to modify the ALU code to some extent inorder to get an approximate answer 
+ Floating Point adder was giving me an unexpected output, which in turn was leading to an output which is approximately double of the expected one.
+
+
+I have included whatever modules was possible from my side with least errors and modifications.
+Though the individual modules are working fine independently, there were some issues we had to deal with in our attempt to integerate the modules 
+
+
+Regards
+Eashan Dash
+Mpd15i017 
+
+

@@ -1,0 +1,40 @@
+#! c:/iverilog/bin/vvp
+:ivl_version "0.10.0 (devel)" "(s20130827)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_010C2FF0 .scope module, "fulladder" "fulladder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s"
+    .port_info 1 /OUTPUT 1 "cout"
+    .port_info 2 /INPUT 1 "a"
+    .port_info 3 /INPUT 1 "b"
+    .port_info 4 /INPUT 1 "c"
+o00F718EC .functor BUFZ 1, C4<z>; HiZ drive
+o00F71904 .functor BUFZ 1, C4<z>; HiZ drive
+L_010C3170 .functor XOR 1, o00F718EC, o00F71904, C4<0>, C4<0>;
+o00F7191C .functor BUFZ 1, C4<z>; HiZ drive
+L_010CEC48 .functor XOR 1, L_010C3170, o00F7191C, C4<0>, C4<0>;
+L_010CEC90 .functor AND 1, o00F718EC, o00F71904, C4<1>, C4<1>;
+L_010CECD8 .functor AND 1, o00F71904, o00F7191C, C4<1>, C4<1>;
+L_010CED20 .functor OR 1, L_010CEC90, L_010CECD8, C4<0>, C4<0>;
+L_010CED68 .functor AND 1, o00F7191C, o00F718EC, C4<1>, C4<1>;
+L_010CEDB0 .functor OR 1, L_010CED20, L_010CED68, C4<0>, C4<0>;
+v010C8510_0 .net *"_s0", 0 0, L_010C3170;  1 drivers
+v010C30C0_0 .net *"_s10", 0 0, L_010CED68;  1 drivers
+v010C3118_0 .net *"_s4", 0 0, L_010CEC90;  1 drivers
+v010CE648_0 .net *"_s6", 0 0, L_010CECD8;  1 drivers
+v010CE6A0_0 .net *"_s8", 0 0, L_010CED20;  1 drivers
+v010CE6F8_0 .net "a", 0 0, o00F718EC;  0 drivers
+v010CE750_0 .net "b", 0 0, o00F71904;  0 drivers
+v010CE7A8_0 .net "c", 0 0, o00F7191C;  0 drivers
+v00FA3DC0_0 .net "cout", 0 0, L_010CEDB0;  1 drivers
+v00FA39F8_0 .net "s", 0 0, L_010CEC48;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "adder.v";

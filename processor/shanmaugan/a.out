@@ -1,0 +1,216 @@
+#! c:/iverilog/bin/vvp
+:ivl_version "0.10.0 (devel)" "(s20130827)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_001C97E8 .scope module, "mem_ram_sync" "mem_ram_sync" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "rst"
+    .port_info 2 /INPUT 1 "read_rq"
+    .port_info 3 /INPUT 1 "write_rq"
+    .port_info 4 /INPUT 6 "rw_address"
+    .port_info 5 /INPUT 8 "write_data"
+    .port_info 6 /OUTPUT 8 "read_data"
+o00A13FD4 .functor BUFZ 1, C4<z>; HiZ drive
+v001CB1B0_0 .net "clk", 0 0, o00A13FD4;  0 drivers
+v001CB6D8_0 .var/i "i", 31 0;
+v001CB680 .array "memory_ram_d", 0 63, 7 0;
+v001CB208 .array "memory_ram_q", 0 63, 7 0;
+v001CB260_0 .var "read_data", 7 0;
+o00A14C1C .functor BUFZ 1, C4<z>; HiZ drive
+v001CB730_0 .net "read_rq", 0 0, o00A14C1C;  0 drivers
+o00A14C34 .functor BUFZ 1, C4<z>; HiZ drive
+v001CB788_0 .net "rst", 0 0, o00A14C34;  0 drivers
+o00A14C4C .functor BUFZ 6, C4<zzzzzz>; HiZ drive
+v001CB7E0_0 .net "rw_address", 5 0, o00A14C4C;  0 drivers
+o00A14C64 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v001CB5D0_0 .net "write_data", 7 0, o00A14C64;  0 drivers
+o00A14C7C .functor BUFZ 1, C4<z>; HiZ drive
+v001CB2B8_0 .net "write_rq", 0 0, o00A14C7C;  0 drivers
+v001CB208_0 .array/port v001CB208, 0;
+v001CB208_1 .array/port v001CB208, 1;
+v001CB208_2 .array/port v001CB208, 2;
+E_00A12A18/0 .event edge, v001CB6D8_0, v001CB208_0, v001CB208_1, v001CB208_2;
+v001CB208_3 .array/port v001CB208, 3;
+v001CB208_4 .array/port v001CB208, 4;
+v001CB208_5 .array/port v001CB208, 5;
+v001CB208_6 .array/port v001CB208, 6;
+E_00A12A18/1 .event edge, v001CB208_3, v001CB208_4, v001CB208_5, v001CB208_6;
+v001CB208_7 .array/port v001CB208, 7;
+v001CB208_8 .array/port v001CB208, 8;
+v001CB208_9 .array/port v001CB208, 9;
+v001CB208_10 .array/port v001CB208, 10;
+E_00A12A18/2 .event edge, v001CB208_7, v001CB208_8, v001CB208_9, v001CB208_10;
+v001CB208_11 .array/port v001CB208, 11;
+v001CB208_12 .array/port v001CB208, 12;
+v001CB208_13 .array/port v001CB208, 13;
+v001CB208_14 .array/port v001CB208, 14;
+E_00A12A18/3 .event edge, v001CB208_11, v001CB208_12, v001CB208_13, v001CB208_14;
+v001CB208_15 .array/port v001CB208, 15;
+v001CB208_16 .array/port v001CB208, 16;
+v001CB208_17 .array/port v001CB208, 17;
+v001CB208_18 .array/port v001CB208, 18;
+E_00A12A18/4 .event edge, v001CB208_15, v001CB208_16, v001CB208_17, v001CB208_18;
+v001CB208_19 .array/port v001CB208, 19;
+v001CB208_20 .array/port v001CB208, 20;
+v001CB208_21 .array/port v001CB208, 21;
+v001CB208_22 .array/port v001CB208, 22;
+E_00A12A18/5 .event edge, v001CB208_19, v001CB208_20, v001CB208_21, v001CB208_22;
+v001CB208_23 .array/port v001CB208, 23;
+v001CB208_24 .array/port v001CB208, 24;
+v001CB208_25 .array/port v001CB208, 25;
+v001CB208_26 .array/port v001CB208, 26;
+E_00A12A18/6 .event edge, v001CB208_23, v001CB208_24, v001CB208_25, v001CB208_26;
+v001CB208_27 .array/port v001CB208, 27;
+v001CB208_28 .array/port v001CB208, 28;
+v001CB208_29 .array/port v001CB208, 29;
+v001CB208_30 .array/port v001CB208, 30;
+E_00A12A18/7 .event edge, v001CB208_27, v001CB208_28, v001CB208_29, v001CB208_30;
+v001CB208_31 .array/port v001CB208, 31;
+v001CB208_32 .array/port v001CB208, 32;
+v001CB208_33 .array/port v001CB208, 33;
+v001CB208_34 .array/port v001CB208, 34;
+E_00A12A18/8 .event edge, v001CB208_31, v001CB208_32, v001CB208_33, v001CB208_34;
+v001CB208_35 .array/port v001CB208, 35;
+v001CB208_36 .array/port v001CB208, 36;
+v001CB208_37 .array/port v001CB208, 37;
+v001CB208_38 .array/port v001CB208, 38;
+E_00A12A18/9 .event edge, v001CB208_35, v001CB208_36, v001CB208_37, v001CB208_38;
+v001CB208_39 .array/port v001CB208, 39;
+v001CB208_40 .array/port v001CB208, 40;
+v001CB208_41 .array/port v001CB208, 41;
+v001CB208_42 .array/port v001CB208, 42;
+E_00A12A18/10 .event edge, v001CB208_39, v001CB208_40, v001CB208_41, v001CB208_42;
+v001CB208_43 .array/port v001CB208, 43;
+v001CB208_44 .array/port v001CB208, 44;
+v001CB208_45 .array/port v001CB208, 45;
+v001CB208_46 .array/port v001CB208, 46;
+E_00A12A18/11 .event edge, v001CB208_43, v001CB208_44, v001CB208_45, v001CB208_46;
+v001CB208_47 .array/port v001CB208, 47;
+v001CB208_48 .array/port v001CB208, 48;
+v001CB208_49 .array/port v001CB208, 49;
+v001CB208_50 .array/port v001CB208, 50;
+E_00A12A18/12 .event edge, v001CB208_47, v001CB208_48, v001CB208_49, v001CB208_50;
+v001CB208_51 .array/port v001CB208, 51;
+v001CB208_52 .array/port v001CB208, 52;
+v001CB208_53 .array/port v001CB208, 53;
+v001CB208_54 .array/port v001CB208, 54;
+E_00A12A18/13 .event edge, v001CB208_51, v001CB208_52, v001CB208_53, v001CB208_54;
+v001CB208_55 .array/port v001CB208, 55;
+v001CB208_56 .array/port v001CB208, 56;
+v001CB208_57 .array/port v001CB208, 57;
+v001CB208_58 .array/port v001CB208, 58;
+E_00A12A18/14 .event edge, v001CB208_55, v001CB208_56, v001CB208_57, v001CB208_58;
+v001CB208_59 .array/port v001CB208, 59;
+v001CB208_60 .array/port v001CB208, 60;
+v001CB208_61 .array/port v001CB208, 61;
+v001CB208_62 .array/port v001CB208, 62;
+E_00A12A18/15 .event edge, v001CB208_59, v001CB208_60, v001CB208_61, v001CB208_62;
+v001CB208_63 .array/port v001CB208, 63;
+E_00A12A18/16 .event edge, v001CB208_63, v001CB2B8_0, v001CB730_0, v001CB5D0_0;
+E_00A12A18/17 .event edge, v001CB7E0_0;
+E_00A12A18 .event/or E_00A12A18/0, E_00A12A18/1, E_00A12A18/2, E_00A12A18/3, E_00A12A18/4, E_00A12A18/5, E_00A12A18/6, E_00A12A18/7, E_00A12A18/8, E_00A12A18/9, E_00A12A18/10, E_00A12A18/11, E_00A12A18/12, E_00A12A18/13, E_00A12A18/14, E_00A12A18/15, E_00A12A18/16, E_00A12A18/17;
+E_00A129A0/0 .event negedge, v001CB788_0;
+E_00A129A0/1 .event posedge, v001CB1B0_0;
+E_00A129A0 .event/or E_00A129A0/0, E_00A129A0/1;
+    .scope S_001C97E8;
+T_0 ;
+    %wait E_00A129A0;
+    %load/v 8, v001CB788_0, 1;
+    %inv 8, 1;
+    %jmp/0xz  T_0.0, 8;
+    %set/v v001CB6D8_0, 0, 32;
+T_0.2 ;
+    %load/v 8, v001CB6D8_0, 32;
+    %cmpi/s 8, 64, 32;
+    %jmp/0xz T_0.3, 5;
+    %ix/getv/s 3, v001CB6D8_0;
+    %jmp/1 t_0, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v001CB208, 0, 0;
+t_0 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v001CB6D8_0, 32;
+    %set/v v001CB6D8_0, 8, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %jmp T_0.1;
+T_0.0 ;
+    %set/v v001CB6D8_0, 0, 32;
+T_0.4 ;
+    %load/v 8, v001CB6D8_0, 32;
+    %cmpi/s 8, 64, 32;
+    %jmp/0xz T_0.5, 5;
+    %ix/getv/s 3, v001CB6D8_0;
+    %load/av 8, v001CB680, 8;
+    %ix/getv/s 3, v001CB6D8_0;
+    %jmp/1 t_1, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v001CB208, 0, 8;
+t_1 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v001CB6D8_0, 32;
+    %set/v v001CB6D8_0, 8, 32;
+    %jmp T_0.4;
+T_0.5 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_001C97E8;
+T_1 ;
+    %wait E_00A12A18;
+    %set/v v001CB6D8_0, 0, 32;
+T_1.0 ;
+    %load/v 8, v001CB6D8_0, 32;
+    %cmpi/s 8, 64, 32;
+    %jmp/0xz T_1.1, 5;
+    %ix/getv/s 3, v001CB6D8_0;
+    %load/av 8, v001CB208, 8;
+    %ix/getv/s 3, v001CB6D8_0;
+    %jmp/1 t_2, 4;
+    %ix/load 1, 0, 0;
+    %set/av v001CB680, 8, 8;
+t_2 ;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v001CB6D8_0, 32;
+    %set/v v001CB6D8_0, 8, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %load/v 8, v001CB2B8_0, 1;
+    %load/v 9, v001CB730_0, 1;
+    %inv 9, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_1.2, 8;
+    %load/v 8, v001CB5D0_0, 8;
+    %load/v 16, v001CB7E0_0, 6;
+    %pad 22, 0, 2;
+    %ix/get 3, 16, 8;
+    %jmp/1 t_3, 4;
+    %ix/load 1, 0, 0;
+    %set/av v001CB680, 8, 8;
+t_3 ;
+T_1.2 ;
+    %load/v 8, v001CB2B8_0, 1;
+    %inv 8, 1;
+    %load/v 9, v001CB730_0, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_1.4, 8;
+    %load/v 16, v001CB7E0_0, 6;
+    %pad 22, 0, 2;
+    %ix/get 3, 16, 8;
+    %load/av 8, v001CB208, 8;
+    %set/v v001CB260_0, 8, 8;
+T_1.4 ;
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "memory.v";
